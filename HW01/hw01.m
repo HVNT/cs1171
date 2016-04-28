@@ -4,17 +4,8 @@
 % GT Email     : hbrennick3
 % Homework     : 1
 % Course       : CS1371
-% Section      : <Your Section>
-% Collaboration: <place here one of the following:
-%                 "I worked on the homework assignment alone, using
-%                  only course materials."
-%                 OR
-%                 "I worked on this homework with <give the names of the
-%                  people you worked with>, used solutions or partial
-%                  solutions provided by <name the people or other
-%                  sources>, and referred to <cite any texts, web sites, or
-%                  other materials not provided as course materials for CS
-%                  1371.>"
+% Section      : null
+% Collaboration: null
 %
 %
 % Files provided with this homework:  
