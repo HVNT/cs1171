@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Name         : <your name>
+% Name         : Hunter Brennick
 % T-square ID  : <your t-square ID. Example: gburdell3>
 % GT Email     : <your GT email address>
 % Homework     : <homework assignment number/original or resubmission>

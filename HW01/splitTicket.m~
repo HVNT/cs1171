@@ -1,4 +1,0 @@
-function amtDue = splitTicket(totalCost, tipPerc, numPeople)
-   amtDue = (totalCost 
-
-end

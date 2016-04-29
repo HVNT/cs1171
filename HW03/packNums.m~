@@ -1,0 +1,16 @@
+function [ broken_integers ] = packNums( integers )
+broken_integers = [];
+
+for idx = 1:length(integers)
+    tint = integers(idx);
+    
+    if (length(tint))
+        for tIdx = 1:length(tint)
+            
+
+        end
+    end
+end
+end
+
+

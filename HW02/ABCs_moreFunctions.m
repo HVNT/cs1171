@@ -16,13 +16,13 @@ function [A, B, C, D, E, F, G, H, I, J, K] = ABCs_moreFunctions(DNE)
 % true if they are valid, false otherwise.
 
 % function myFunc = [in1 in2]
-A = ?;
+A = false;
 
 % function out = myFunc
-B = ?;
+B = true;
 
 % function [out two three] = myFunc(in)
-C = ?;
+C = true;
 
 % function myFunc
 D = ?;
