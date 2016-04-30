@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Name         : Hunter Brennick
+% Name         : <your name>
 % T-square ID  : <your t-square ID. Example: gburdell3>
 % GT Email     : <your GT email address>
 % Homework     : <homework assignment number/original or resubmission>
@@ -18,22 +18,25 @@
 %
 %
 % Files provided with this homework:  
-%	ABCs_hw04_pretest.p
-%	ABCs_logicals.m
-%	Homework04_DrillProblems.pdf
-%	caesarSalad_soln.p
-%	criminalMinds_soln.p
-%	grammarCheck_soln.p
-%	hw04.m
-%	lottery_soln.p
+%	ABCs_conditionals.m
+%	ABCs_hw06_pretest.p
+%	Homework06_DrillProblems.pdf
+%	beautyAndBrains_soln.p
+%	easterEgg.png
+%	hw06.m
+%	lostThatLovinFeelin_soln.p
+%	lotteryNums.mat
+%	lotteryTickets_soln.p
+%	loveMeTinder_soln.p
+%	lovinFeelinTestCases.mat
 %
 % Files to submit:
-%	ABCs_logicals.m
-%	caesarSalad.m
-%	criminalMinds.m
-%	grammarCheck.m
-%	hw04.m
-%	lottery.m
+%	ABCs_conditionals.m
+%	beautyAndBrains.m
+%	hw06.m
+%	lostThatLovinFeelin.m
+%	lotteryTickets.m
+%	loveMeTinder.m
 %
 % Instructions:
 %   1) Follow the directions for each problem very carefully or you will
@@ -58,17 +61,17 @@
 %% PART 1.  ABC Problems
 %--------------------------------------------------------------------------
 %
-% Part of this homework is an m-file called "ABCs_logicals.m".
+% Part of this homework is an m-file called "ABCs_conditionals.m".
 % Open this file in MATLAB and complete it
 % according to the directions contained within. You can test your answers with
 % the test file listed below.
 %
 % Files to Complete: 
-%	ABCs_logicals.m
+%	ABCs_conditionals.m
 
 %
 % ABCs File Testing:
-%	ABCs_hw04_pretest.p
+%	ABCs_hw06_pretest.p
 %
 %==========================================================================
 %% COMMENTING
@@ -143,11 +146,11 @@
 %% PART 2. Drill Problems
 %--------------------------------------------------------------------------
 %
-% Included with this homework is a file entitled "Homework04_DrillProblems.pdf",
+% Included with this homework is a file entitled "Homework06_DrillProblems.pdf",
 % containing instructions for 4 drill problems that cover the
 % following topic:
 %
-%	Logicals
+%	Conditionals
 %
 % Follow the directions carefully to write code to complete the drill
 % problems as described. Make sure file names as well as function headers
@@ -163,62 +166,88 @@
 % The function call with the test-inputs is shown in the first line of each
 % test case, and the correct outputs are displayed in subsequent lines.
 %
-%% Function Name: grammarCheck
+%% Function Name: beautyAndBrains
 %
 % Test Cases:
-% [test1] = grammarCheck('I love coding in MATLAB!');
-% 	test1 => 1
+% [output1, score1] = beautyAndBrains([5 8 9], [10 10 10], [312 781 420]);
+% 	output1 => 'The perfect date is candidate #420.'
+% 	score1 => 19
 % 
-% [test2] = grammarCheck('Just keep swimming');
-% 	test2 => 0
+% [output2, score2] = beautyAndBrains(1:10, linspace(5, 5, 10), [1 2 4 8 16 32 64 128 256 512]);
+% 	output2 => 'The perfect date is candidate #512.'
+% 	score2 => 15
 % 
-% [test3] = grammarCheck('why so serious?');
-% 	test3 => 0
+% [output3, score3] = beautyAndBrains([2 7 3 9 5 4 1], [1 0 4 3 2 5 3], [123 456 789 012 234 567 890]);
+% 	output3 => 'No perfect date was found, however candidate #12 has the highest score.'
+% 	score3 => 12
 %
 %--------------------------------------------------------------------------------
-%% Function Name: lottery
+%% Function Name: loveMeTinder
 %
 % Test Cases:
-% [amount1] = lottery('10-15-34-9-27-1', '10-34-12-20-15-5', 100000);
-% 	amount1 => 60000
+% [swipe1] = loveMeTinder('Harrison', [18, 25, 3], [21, 1], 'UCLA', false, 'Cats');
+% 	swipe1 => 'Swipe right on Harrison's picture'
 % 
-% [amount2] = lottery('12-2-49-7-15-6', '8-15-2-54-19-6', 150000);
-% 	amount2 => 120000
+% [swipe2] = loveMeTinder('Samantha', [20, 30, 15], [20, 7], 'Brandeis', false, '"Women');
+% 	swipe2 => 'Swipe right on Samantha's picture'
 % 
-% [amount3] = lottery('19-26-31-43-10-7', '10-31-19-2-11-7', 450565125);
-% 	amount3 => 540678150
+% [swipe3] = loveMeTinder('Daniel', [28, 32, 2], [32, 1], 'UAB', true, '"When');
+% 	swipe3 => 'Swipe left on Daniel's picture'
+% 
+% [swipe4] = loveMeTinder('JoAnna', [35, 50, 20], [47, 17], 'Georgia Tech', true, '"Ramblin''');
+% 	swipe4 => 'Super Like JoAnna's picture'
+%
+% There's an easter egg somewhere in the solution file to this problem!
+% Type 'help loveMeTinder_soln' in the Command Window and see if you can figure
+% it out!
+%
+% Also, you can type 'help <any solution function>' to get a quick summary of the
+% function. This could be helpful if you ever forget which input is supposed to
+% be what or something like that. You should still refer to the Drill Problems
+% PDF for full function descriptions.
+%--------------------------------------------------------------------------------
+%% Function Name: lotteryTickets
+%
+% Setup:
+% load lotteryNums.mat
+%
+% Test Cases:
+% [prize1] = lotteryTickets(tickets1,winning1);
+% 	prize1 => 'Congratulations! You've won the Grand Prize!'
+% 
+% [prize2] = lotteryTickets(tickets2,winning2);
+% 	prize2 => 'Congratulations! You've won 50104 dollars!'
+% 
+% [prize3] = lotteryTickets(tickets3,winning3);
+% 	prize3 => 'Congratulations! You've won 5000004 dollars!'
+% 
+% [prize4] = lotteryTickets(tickets4,winning4);
+% 	prize4 => 'Too bad. You did not win any money.'
 %
 %--------------------------------------------------------------------------------
-%% Function Name: caesarSalad
+%% Function Name: lostThatLovinFeelin
+%
+% Setup:
+% load('lovinFeelinTestCases.mat');
 %
 % Test Cases:
-% [coded1] = caesarSalad('matlab',5);
-% 	coded1 => 'rfyqfg'
+% [direc1] = lostThatLovinFeelin(board1, loc1);
+% 	direc1 => 'Head Northwest to find love.'
 % 
-% [coded2] = caesarSalad('rfyqfg',-5);
-% 	coded2 => 'matlab'
+% [direc2] = lostThatLovinFeelin(board2, loc2);
+% 	direc2 => 'Head Southeast to find love.'
 % 
-% [coded3] = caesarSalad('hippopotomonstrosesquipedaliophobia',84);
-% 	coded3 => 'novvuvuzusutyzxuykywaovkjgrouvnuhog'
-%
-%--------------------------------------------------------------------------------
-%% Function Name: criminalMinds
-%
-% Test Cases:
-% [criminal1] = criminalMinds([true],[true],[false],[true]);
-% 	criminal1 => 'Suspect #3 is lying.'
+% [direc3] = lostThatLovinFeelin(board3, loc3);
+% 	direc3 => 'Head East to find love.'
 % 
-% [criminal2] = criminalMinds([true false false true true], [false true true true false], [false true true true false], [false true true true false]);
-% 	criminal2 => 'Suspect #1 is lying.'
-% 
-% [criminal3] = criminalMinds([true true true false], [true true true false], [true true true false], [true true false false]);
-% 	criminal3 => 'Suspect #4 is lying.'
+% [direc4] = lostThatLovinFeelin(board4, loc4);
+% 	direc4 => 'There is no love to be found :('
 %
 %==========================================================================
 %% Click of the Week!!
 %--------------------------------------------------------------------------
 %
-%   https://www.youtube.com/watch?v=AhbMPn-s5l0
+%   https://www.youtube.com/watch?v=B4XzLDM3Py8
 %
 %==========================================================================
 %

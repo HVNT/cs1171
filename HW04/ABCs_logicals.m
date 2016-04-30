@@ -27,6 +27,7 @@ function [A B C D E F G H] = ABCs_logicals(num, vec1, vec2, str1, str2)
 % finally there is ~=, which stands for "not equal to". Use this knowledge
 % to check if your input variable, num, is a positive number (i.e. greater
 % than zero). (A)
+A = num > 0;
 
 
 % 2. & and |. The "and" and "or" operators are simplistic, but very
@@ -36,7 +37,7 @@ function [A B C D E F G H] = ABCs_logicals(num, vec1, vec2, str1, str2)
 % compares two logical values and returns a true if either of its compared
 % values are true. Use this knowledge to find if num is both a positive
 % number and not equal to 1. (B)
-
+B = A & num ~= 1;
 
 % 3. any() and all(). any() and all() are two built-in functions in matlab
 % that can be used on vectors of logical data. As their names imply, any()
@@ -45,6 +46,7 @@ function [A B C D E F G H] = ABCs_logicals(num, vec1, vec2, str1, str2)
 % logicals is true. any() is to the "or" operator as all() is to the "and"
 % operator. Use this knowledge to find if all the logical values in vec2
 % are true. (C)
+C = all(vec2);
 
 
 % 4. is_____. Matlab has many built-in functions starting with "is", and
@@ -58,6 +60,7 @@ function [A B C D E F G H] = ABCs_logicals(num, vec1, vec2, str1, str2)
 % is convenient because it will work with inputs of differing lengths, 
 % unlike the double equals operator ("=="). Use this knowledge to check if 
 % vec1 is equal to vec2. (D)
+D = isequal(vec1, vec2);
 
 
 % 5. Checking for even or odd numbers. Something for which there is no
@@ -68,6 +71,7 @@ function [A B C D E F G H] = ABCs_logicals(num, vec1, vec2, str1, str2)
 % out a line of code: "isEvenOrNot = mod(num,2) == 0;". Because if a number
 % is divisible by 2, then its mod with 2 with just be 0. Use this and your
 % knowledge of mod() to check if the input variable, num, is odd. (E)
+E = mod(num, 2);
 
 
 % 6. "Not" operator. As you may have seen from the "not-equals" operation
@@ -76,7 +80,7 @@ function [A B C D E F G H] = ABCs_logicals(num, vec1, vec2, str1, str2)
 % value or logical vector to invert it. For example, "~[true false true]"
 % will return "[false true false]". Use this knowledge along with your code
 % from letter D to check if vec1 is not equal to vec2. (F)
-
+F = ~isequal(vec1, vec2);
 
 % 7. Comparing strings. It is common in MATLAB that you will need to
 % compare two strings that are not necessarily the same length, to check if
@@ -85,6 +89,7 @@ function [A B C D E F G H] = ABCs_logicals(num, vec1, vec2, str1, str2)
 % thats compares strings but ignores case. Use this knowledge (along with 
 % everything else in this file) to determine if str1 and str2 are NOT the 
 % same string (G), but ARE the same string if you ignore case (H).
-
+G = ~strcmp(str1, str2);
+H = strcmpi(str1, str2);
 
 end
