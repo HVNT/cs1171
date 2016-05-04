@@ -19,21 +19,35 @@ function [A B C D] = ABCs_conditionals(x, y, z)
 % one of the following numbers: 1, 0, or -1 depending on whether x is 
 % positive (set A to 1), zero (set A to 0), or negative (set A to -1). 
 % Note that you must use an if statement. (A).
-
+if (x < 0)
+    A = -1;
+elseif (x == 0)
+    A = 0;
+else
+    A = 1;
+end
+    
 
 % 2) switch statements: y is an integer. Use a switch statement to set B
 % equal to one of the following values: true, false, or the string
 % 'neither'. If y is {3, 6, 8, 9, 11}, then set B to true. If y is {2, 5,
 % 7}, then set B to false. If y is neither, then set B to the string
 % 'neither'. You must use a switch statement to solve this problem.(B) 
-
+switch(y)
+    case {3, 6, 8, 9, 11}
+        B = true;
+    case {2, 5, 7}
+        B = true;
+    otherwise
+        B = 'neither';
+end
 
 % 3) any: Use the any() function to determine if any of the values in the
 % vector z are true. (C)
-
+C = any(z);
 
 % 4) all: Use the all() function to determine if all of the values in the
 % vector z are true. (D)
-
+D = all(z);
 
 end

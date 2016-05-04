@@ -1,0 +1,18 @@
+function [ lotteryWinnings ] = lotteryTickets_soln( purchasedTicketNums, winningTicket )
+[ticks cols] = size(purchasedTicketNums);
+totalTicketsValue = 0;
+
+for iTick = 1:ticks
+    currentTicketValue = 0;
+    currentWhiteBallsMatched = 
+    
+    for iTickCol = 1:cols
+        if (any(winningTicket(1:5) == purchasedTicketNums(iTick, iTickCol)))
+            
+        end
+        
+    end
+    
+end
+end
+
