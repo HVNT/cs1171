@@ -1,0 +1,28 @@
+function [ targetVal ] = cellSearch( nestedCellArr, idxSeq )
+targetVal = 0;
+disp(nestedCellArr);
+disp(idxSeq);
+currIdx = 1;
+
+for idx = 1:length(idxSeq)
+    currIdx = idx;
+    tIdx = idxSeq(idx);
+    
+    if (iscell(nestedCellArr{tIdx}))
+        cellPtr = nestedCellArr{tIdx};
+    else
+        cellPtr = nestedCellArr(tIdx);
+        targetVal = cellPtr;
+        break;
+    end
+end
+
+if (~isequal(currIdx, length(idxSeq)))
+    for currIdx = 
+        tIdx = idxSeq(currIdx);
+        targetVal = targetVal(tIdx);
+        currIdx = currIdx + 1;
+    end
+end
+end
+

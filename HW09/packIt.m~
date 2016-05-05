@@ -1,0 +1,33 @@
+function [ lunchStatement ] = packIt( txtFile, xlsRecipes )
+calsTxt = fileread(txtFile);
+
+[~, txt] = xlsread(xlsRecipes);
+[rows, numRecipes] = size(txt);
+
+maxCals = 0;
+targetRecipeName = '';
+
+    function print()
+        disp('hey');
+    end
+
+print
+
+for recIdx = 1:numRecipes % iterate over cols first.. by recipe
+    currCals = 0;
+    
+    for rIdx = 1:rows
+        
+        
+    end
+    
+    if (currCals > maxCals)
+        maxCals = currCals;
+        targetRecipeName = txt(1, recIdx);
+    end
+end
+
+lunchStatement = ['I will make ', targetRecipeName, ' for lunch and consume ', maxCals, ' calories.'];
+
+end
+

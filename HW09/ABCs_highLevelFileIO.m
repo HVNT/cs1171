@@ -22,8 +22,14 @@ function [A B C] = ABCs_highLevelFileIO(xls1, xls2)
 % given as an input to this function in xls1.  Store the numerical data from
 % this worksheet in A. Store the text data in B and store the raw data
 % (entire worksheet) in C.
-%
-% D) Writing Excel files. Write just the text data from xls1 to xls2.
+[num, txt, raw] = xlsread(xls1);
+A = num;
+B = txt;
+C = raw;
 
+
+% D) Writing Excel files. Write just the text data from xls1 to xls2.
+% xlswrite(xls2, B);
+% cannot write on OS X...
 
 end
