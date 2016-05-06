@@ -2,7 +2,7 @@ function [ isReadingLvl ] = wordDist( file )
 isReadingLvl = false;
 fID = fopen(file);
 tline = fgets(fID);
-wordDist = {};
+wordDist = [];
 
 while ischar(tline)
    [tword, trem] = strtok(tline, ' ');
@@ -16,7 +16,7 @@ while ischar(tline)
   
    if (~isempty(trem))
        while (~isempty(trem))
-           [tword, trem] = strok(trem, ' ');
+           [tword, trem] = strok(trem, [' ']);
        end
    end
    

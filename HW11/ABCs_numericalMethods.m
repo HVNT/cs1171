@@ -9,7 +9,7 @@ function [A, B, C, D, E, F, G, H, I] = ABCs_numericalMethods(x, y, xi)
 
 % a) interp1. Find the y values that correspond to the xi values using
 % linear interpolation from the vectors x and y. (A)
-A = iterp1(x, y, xi, 'linear');
+A = interp1(x, y, xi);
 
 % b) spline. Find the y values that correspond to the xi values using
 % the spline method from the vectors x and y. (B)
@@ -26,12 +26,12 @@ D = polyval(C, xi);
 % e) diff. Approximate the derivative, dy/dx, for the vectors x and y. (E)
 dx = diff(x);
 dy = diff(y);
-E = dy/dx;
+E = dy./dx;
 
 % f) Approximate the second derivative for the vectors x and y. The
 % x vector should consist of all except for the last index of the original
 % x vector used in the previous part. (F)
-F = diff(dy)/diff(dx);
+F = diff(dy)./diff(dx);
 
 % g) cumsum. Find the cumulative sum of the elements in x. (G)
 G = cumsum(x);

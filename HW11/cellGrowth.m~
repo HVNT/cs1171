@@ -1,9 +1,0 @@
-function cellGrowth( cellCts, timePts )
-plot(timePts, cellCts)
-plot(timePts, max(cellCts).*ones(1,length(cellCts)), 'b-.');
-plot(timePts, mean(cellCts).*ones(1,length(cellCts)), 'm--');
-
-tRange = max(timePts) - min(timePts);
-cRange = 
-end
-

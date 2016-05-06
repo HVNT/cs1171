@@ -31,7 +31,7 @@ A = [str3, str2, str1];
 % its fields are 'college' and 'state'. Add another element to the end by
 % setting the value of the 'college' field to 'UCLA'. Hint: First alter sa1 
 % then assign the value B. Indexing with (end + 1) may be be helpful. (B)
-sa1 = [sa1, struct('college', 'UCLA', 'state', '')];
+sa1 = [sa1, struct('college', 'UCLA', 's)];
 B = sa1;
 
 % 3. What value will be given when sa1(end).state is called? (C)
